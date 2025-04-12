@@ -1,9 +1,10 @@
 class Solution:
     def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
         d=defaultdict(int)
+        k=set(arr2)
         end=[]
         for num in arr1:
-            if num not in arr2:
+            if num not in k:
                 end.append(num)
             d[num]+=1
 
