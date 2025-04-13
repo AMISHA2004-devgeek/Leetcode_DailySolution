@@ -6,8 +6,9 @@ class Solution:
 
         dictsort=sorted(k.items(),key=lambda x: x[1], reverse=True)
         res=''
-        for char,freq in dictsort:
-            res+=char*freq
+        for key,val in dictsort:
+            for _ in range(val):
+                res+=key
 
         return res
 
