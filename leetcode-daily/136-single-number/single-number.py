@@ -1,6 +1,9 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        res=0
+        k=defaultdict(int)
         for num in nums:
-            res^=num
-        return res
+            k[num]+=1
+        for key , val in k.items():
+            if val==1:
+                return key
+        
