@@ -3,8 +3,7 @@ class Solution:
         n=len(nums)
         maxsum=currsum=sum(nums[:k])
         for i in range(k,n):
-            currsum=currsum-nums[i-k]+nums[i]
+            currsum=currsum+nums[i]-nums[i-k]
             maxsum=max(maxsum,currsum)
         return maxsum/k
-
         
