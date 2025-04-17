@@ -1,14 +1,12 @@
-from collections import defaultdict
-from typing import List
-
+from collections import Counter
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagramdict = defaultdict(list)
-        for s in strs:
-            count = [0] * 26
-            for char in s:
-                count[ord(char) - ord('a')] += 1
-            key = tuple(count)
-            anagramdict[key].append(s)
-        return list(anagramdict.values())
+        k = defaultdict(list)
+        for word in strs:
+            key = tuple(sorted(Counter(word).items()))
+            k[key].append(word)
+        return(list(k.values()))
 
+
+
+        
