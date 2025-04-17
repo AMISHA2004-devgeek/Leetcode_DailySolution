@@ -5,5 +5,5 @@ class Solution:
             if ch.isdigit():
              k.add(int(ch))
         k=sorted(k,reverse=True)
-        return k[1] if len(k)>1 else -1
+        return k[1] if len(k)>=2 else -1
         
