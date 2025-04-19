@@ -8,10 +8,8 @@ class Solution:
                 seen.remove(s[l])
                 l+=1
             seen.add(s[r])
-            maxlen=max(maxlen,len(seen))
+            maxlen=max(maxlen,r-l+1)
         return maxlen
-
-
 
 
            
