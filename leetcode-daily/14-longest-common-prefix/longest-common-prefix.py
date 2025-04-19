@@ -6,7 +6,6 @@ class Solution:
             for s in strs[1:]:
                 if i>=len(s) or s[i]!=ch:
                     return res
-            res+=ch
+            res=res+ch
         return res
-            
         
