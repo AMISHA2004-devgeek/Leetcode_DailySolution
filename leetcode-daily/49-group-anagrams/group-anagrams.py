@@ -1,11 +1,12 @@
-from collections import Counter
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        k = defaultdict(list)
-        for word in strs:
-            key = tuple(sorted(Counter(word).items()))
-            k[key].append(word)
-        return(list(k.values()))
+from collections import Counter ,defaultdict
+class Solution(object):
+    def groupAnagrams(self, strs):
+        k=defaultdict(list)
+        for s in strs:
+            key="".join(sorted(s))
+            k[key].append(s)
+        return list(k.values())
+
 
 
 
